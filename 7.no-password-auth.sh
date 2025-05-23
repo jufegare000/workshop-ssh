@@ -4,7 +4,7 @@ docker exec -it server sh
 # Asegúrate que estas líneas estén:
 PasswordAuthentication no
 PubkeyAuthentication yes
-AuthorizedKeysFile /home/sshuser/authorized_keys
+AuthorizedKeysFile /home/sshuser/.ssh/authorized_keys
 
 # Reiniciar sshd si es necesario
 pkill sshd

@@ -6,7 +6,8 @@ RUN apk add --no-cache openssh \
  && echo "sshuser:password" | chpasswd \
  && ssh-keygen -A \
  && echo "PermitRootLogin no" >> /etc/ssh/sshd_config \
- && echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+ && echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config \
+ && mkdir /home/sshuser/.ssh
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
